@@ -65,7 +65,6 @@ p {
 	color: blue;
 	font-weight: bold;
 	transition: color .2s;
-	margin-left: 4rem;
 }
 
 input[type="radio"]:checked + label p,
@@ -124,14 +123,34 @@ label:hover .tab__content {
 	width: 20rem;
 	height: 0;
 	opacity: 0;
-	background-image: url("/img/spider-man.gif");
 	background-size: cover;
 	transition: all .4s;
 }
 
+.tab__image--first {
+	background-image: url("/img/spider-man.gif");
+}
+
+.tab__image--second {
+	background-image: url("/img/sigma.gif");
+}
+
+.tab__image--third {
+	background-image: url("/img/trav.gif");
+}
+
+.tab__image--fourth {
+	background-image: url("/img/yes.gif");
+}
+
+.tab__image--fifth {
+	background-image: url("/img/see.gif");
+}
+
 input[type="radio"]:checked + label .tab__content .tab__image,
 label:hover .tab__content .tab__image {
-	height: 20rem;
+	width: 25rem;
+	height: 25rem;
 	opacity: 1;
 }
 
