@@ -12,7 +12,6 @@ html {
 body {
 	display: flex;
 	flex-direction: column;
-	justify-content: center;
 	align-items: center;
 	font-family: "PT Sans", "Arial", sans-serif;
 	font-style: normal;
@@ -34,7 +33,10 @@ body {
 }
 
 h1 {
-	padding: 1.2rem;
+	font-size: 2rem;
+	padding: 3rem 0;
+	text-transform: uppercase;
+	font-weight: bold;
 }
 
 .accordion__container {
@@ -45,11 +47,11 @@ h1 {
 label {
 	width: 100%;
 	height: 100%;
-	cursor: pointer;
+	
 	display: flex;
 	flex-direction: column-reverse;
 	margin: 0;
-	border-top: 0.2rem solid violet;
+	border-top: 0.2rem solid black;
 }
 
 .tab__title {
@@ -69,12 +71,13 @@ p {
 	padding: 0;
 	margin: 0;
 	color: blue;
-	font-weight: bold;
+	text-shadow: 0.1em 0.1em 0.4em red;
+	font-weight: normal;
 	transition: color .2s;
+	font-size: 1.4rem;
 }
 
-input[type="radio"]:checked + label p,
-.accordion__wrapper:hover label p {
+input[type="radio"]:checked + label p {
 	color: black;
 }
 
@@ -99,47 +102,37 @@ input[type="radio"]:checked + label p,
 	background-image: url("/img/shovel.png");
 	background-repeat: no-repeat;
 	background-size: cover;
-	transition: all .1s;
+	transition: all .2s;
 }
 
-input[type="radio"]:checked + label .tab-mem__block .tab-mem__image,
-label:hover .tab-mem__block .tab-mem__image {
+input[type="radio"]:checked + label .tab-mem__block .tab-mem__image {
 	background-image: url("/img/axes.png");
-}
-
-.accordion__wrapper:hover .tab-mem__image {
-	opacity: 1;
 }
 
 .tab__content {
 	display: block;
 	width: 100%;
 	height: 0;
-	transition: all .4s;
-	cursor: pointer;
+	transition: all .5s;
 }
 
-input[type="radio"]:checked + label .tab__content,
-label:hover .tab__content {
+input[type="radio"]:checked + label .tab__content {
 	height: 100%;
-	display: flex;
-	padding: 10% 15%;
-	
-	
+	padding: 5% 0;
 }
 
 .tab__image {
-	width: 20rem;
+	display: flex;
 	height: 0;
 	opacity: 0;
 	object-fit: contain;
-	transition: all .4s;
+	transition: all .5s;
 }
 
 input[type="radio"]:checked + label .tab__content .tab__image,
 label:hover .tab__content .tab__image {
 	width: 100%;
-	height: 100%;
+	height: 30rem;
 	opacity: 1;
 }
 
@@ -150,15 +143,56 @@ label:hover .tab__content .tab__image {
 }
 
 @media (min-width: 820px) and (max-width: 1919px) {
+	h1 {
+		font-size: 2.5rem;
+	}
+	
+	p {
+		font-size: 2rem;
+	}
+	
 	.accordion {
 		width: 100%;
-		padding: 0 30%;
+		padding: 0 15%;
 	}
 }
 
 @media (min-width: 1920px) { 
+	h1 {
+		font-size: 3rem;
+	}
+
+	p {
+		font-size: 2.5rem;
+	}
+	
 	.accordion {
-		max-width: 800px;
+		max-width: 80rem;
 		width: 100%;
+	}
+
+	.accordion__wrapper:hover label p {
+		color: black;
+	}
+
+	label {
+		cursor: pointer;
+	}
+
+	.tab__content {
+		cursor: pointer;
+	}
+
+	label:hover .tab__content {
+		height: 100%;
+		padding: 5% 0;
+	}
+
+	.accordion__wrapper:hover .tab-mem__image {
+		opacity: 1;
+	}
+
+	label:hover .tab-mem__block .tab-mem__image {
+		background-image: url("/img/axes.png");
 	}
 }
