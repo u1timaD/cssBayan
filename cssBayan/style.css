@@ -6,9 +6,14 @@
 
 html {
 	font-size: 62.5%;
+  	min-height: 100vh;
 }
 
 body {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
 	font-family: "PT Sans", "Arial", sans-serif;
 	font-style: normal;
 	font-weight: 400;
@@ -16,11 +21,7 @@ body {
 	line-height: 2.4rem;
 	color: black;
 	background-color:bisque;
-}
-
-.accordion {
-	display: flex;
-	flex-direction: column;
+  	min-height: 100vh;
 }
 
 .accordion__wrapper {
