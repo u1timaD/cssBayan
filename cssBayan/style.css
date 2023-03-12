@@ -25,7 +25,7 @@ body {
 }
 
 .accordion__wrapper {
-	width: 50rem;
+	width: 100%;
 }
 
 h1 {
@@ -159,5 +159,26 @@ label:hover .tab__content .tab__image {
 .tab__content:active ~ .tab__title p,
 .tab__content:active ~ .tab__title .tab-mem__block .tab-mem__image {
 	mix-blend-mode: color-burn;
+}
 
+
+@media (max-width: 819px) {
+	.accordion {
+		width: 100%;
+		padding: 0 3rem;
+	}
+}
+
+@media (min-width: 820px) and (max-width: 1919px) {
+	.accordion {
+		width: 100%;
+		padding: 0 30%;
+	}
+}
+
+@media (min-width: 1920px) { 
+	.accordion {
+		max-width: 800px;
+		width: 100%;
+	}
 }
