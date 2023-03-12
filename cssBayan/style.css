@@ -24,6 +24,11 @@ body {
   	min-height: 100vh;
 }
 
+.accordion {
+	width: 100%;
+	padding: 0 3rem;
+}
+
 .accordion__wrapper {
 	width: 100%;
 }
@@ -117,41 +122,24 @@ label:hover .tab-mem__block .tab-mem__image {
 input[type="radio"]:checked + label .tab__content,
 label:hover .tab__content {
 	height: 100%;
-	padding: 2rem;
+	display: flex;
+	padding: 10% 15%;
+	
+	
 }
 
 .tab__image {
 	width: 20rem;
 	height: 0;
 	opacity: 0;
-	background-size: cover;
+	object-fit: contain;
 	transition: all .4s;
-}
-
-.tab__image--first {
-	background-image: url("/img/spider-man.gif");
-}
-
-.tab__image--second {
-	background-image: url("/img/sigma.gif");
-}
-
-.tab__image--third {
-	background-image: url("/img/trav.gif");
-}
-
-.tab__image--fourth {
-	background-image: url("/img/yes.gif");
-}
-
-.tab__image--fifth {
-	background-image: url("/img/see.gif");
 }
 
 input[type="radio"]:checked + label .tab__content .tab__image,
 label:hover .tab__content .tab__image {
-	width: 25rem;
-	height: 25rem;
+	width: 100%;
+	height: 100%;
 	opacity: 1;
 }
 
@@ -159,14 +147,6 @@ label:hover .tab__content .tab__image {
 .tab__content:active ~ .tab__title p,
 .tab__content:active ~ .tab__title .tab-mem__block .tab-mem__image {
 	mix-blend-mode: color-burn;
-}
-
-
-@media (max-width: 819px) {
-	.accordion {
-		width: 100%;
-		padding: 0 3rem;
-	}
 }
 
 @media (min-width: 820px) and (max-width: 1919px) {
